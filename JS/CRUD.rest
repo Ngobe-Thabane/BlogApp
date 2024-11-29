@@ -1,0 +1,10 @@
+# GET http://localhost:9000/users
+
+
+POST http://localhost:9000/register 
+Content-Type: application/json
+
+{
+  "username" : "Linda",
+  "password" : "Linda"
+}
