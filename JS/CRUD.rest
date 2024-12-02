@@ -1,10 +1,30 @@
-# GET http://localhost:9000/users
 
-
-POST http://localhost:9000/register 
+###
+POST http://localhost:9000/login 
 Content-Type: application/json
 
 {
   "username" : "Linda",
-  "password" : "Linda"
+  "password" : "Lindadgg"
 }
+
+###
+POST  http://localhost:9000/register
+Content-Type: application/json
+
+{
+  "username": "Thabiso",
+  "password": "checkmate",
+  "resources" : []
+}
+
+###
+POST http://localhost:9000/save-site
+Content-Type: application/json
+
+{
+  "url" : "https://medium.com/@maison.moa/using-jwt-json-web-tokens-to-authorize-users-and-protect-api-routes-3e04a1453c3e"
+}
+
+###
+GET  http://localhost:9000/my-resources
