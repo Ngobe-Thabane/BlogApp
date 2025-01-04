@@ -1,10 +1,10 @@
-import { Link } from "react-router";
+import { data, Link } from "react-router";
 import { useNavigate } from "react-router";
 import { useState } from "react";
 
 export default function LoginPage() {
 
-  let [formData, setFormData] = useState({username:'', password:''});
+  let [data, setFormData] = useState({username:'', password:''});
   let navigate = useNavigate();
 
   const handleChange = (event) =>{
@@ -21,13 +21,13 @@ export default function LoginPage() {
   <div className="login-form">
     <form className="" onSubmit={(e) =>{
       e.preventDefault()
-      logInUser(formData, navigate);
+      logInUser(data, navigate);
     }}>
       <label for="username" >Username </label>
-      <input type="text" id="username" name="username" value={formData.username} onChange={handleChange} ></input>
+      <input type="text" id="username" name="username" value={data.username} onChange={handleChange} ></input>
 
       <label for="password">Password </label>
-      <input type="password" id="password" name="password" value={formData.password} onChange={handleChange} ></input>
+      <input type="password" id="password" name="password" value={data.password} onChange={handleChange} ></input>
       
       <button type="submit" >Login</button>
     </form>
@@ -45,10 +45,8 @@ async function logInUser(formData, navigate){
       'Content-Type': 'application/json'
     },
     body: JSON.stringify(formData)
-  });
+  }).then(resulsts => resulsts.json())
 
-  if(response.ok){
-    localStorage.setItem("isLogedIn",true);
-    navigate('/projectBlogs')
-  }
+  localStorage.setItem('token', response.token);
+  navigate('/projectBlogs');
 }
