@@ -16,13 +16,11 @@ export async function login(req, res){
   if(username !== "" && password !== ""){
 
     const token = await logIn(username, password);
-    if(token !== false){
-      res.appendHeader("Token", token);
-      return res.status(200).send('loggen in');
+    if(token){
+      return res.status(200).header("x-auth-token", token).send({username: username});
     }
   }
-
-  return res.status(403).send('Password or Username Incorect');
+  return res.status(403).send();
 }
 
 

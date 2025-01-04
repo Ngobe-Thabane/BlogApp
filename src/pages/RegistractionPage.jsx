@@ -18,7 +18,7 @@ export default function RegistractionPage() {
   <div className="login-form">
     <form onSubmit={(event)=>{
         event.preventDefault();
-        sendPostRequest(formData, navigate);
+        registerNewUser(formData, navigate);
       }} className="" >
       <label for="username" >Username </label>
       <input type="text" name="username" value={formData.username} onChange={handleChange}></input>
@@ -34,7 +34,7 @@ export default function RegistractionPage() {
 };
 
 
-async function sendPostRequest(formData, navigate){
+async function registerNewUser(formData, navigate){
 
   const response = await fetch('http://localhost:9000/createAccount', {
     method: "POST",
