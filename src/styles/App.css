@@ -3,6 +3,17 @@
   padding: 0;
 }
 
+body{
+  background-color: rgb(63, 62, 62);
+  color: white;
+}
+a{
+  text-decoration: none;
+  color: grey;
+}
+a:hover{
+  color: black;
+}
 nav{
   height: 17vh;
   display: flex;
@@ -66,7 +77,7 @@ nav{
 .login-form{
   width: 50vw;
   margin: 5em auto;
-  background-color: rgba(59, 57, 57, 0.123);
+  background-color: rgba(15, 15, 15, 0.123);
   padding: 2em;
   display: flex;
   flex-direction: column;
@@ -89,7 +100,7 @@ input{
   outline: none;
   padding: .5em auto;
   font-size: .9em;
-  color: rgb(102, 98, 98);
+  color: rgb(194, 190, 190);
 }
 
 button{
@@ -110,4 +121,57 @@ button{
 .blogs{
   width: 70vw;
   margin: 2em auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.post-heading{
+  font-size: 2em;
+}
+.post-content{
+  min-height: 5em;
+  border: 1px solid grey;
+  border-radius: .3em;
+}
+
+.blog-list{
+  list-style: none;
+}
+
+.blog-list > li{
+  font-size: 2.5em;
+  border-bottom: 1px solid rgba(134, 130, 130, 0.678);
+  padding-bottom: .2em;
+  color: gray;
+}
+
+.blog-list > li > a{
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  text-decoration: none;
+}
+
+.blog-intro{
+  text-align: center;
+  line-height: 2em;
+}
+
+.date{
+  font-size: .5em;
+  align-self: flex-end;
+  font-weight: 800;
+  color: grey;
+}
+
+.posting-page{
+  width: 50vw;
+  margin: 2em auto;
+}
+
+.post{
+  line-height: 1.5em;
+  font-size: 1.5em;
+  font-weight: 500;
 }

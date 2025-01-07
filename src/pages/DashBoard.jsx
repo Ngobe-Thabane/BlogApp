@@ -1,13 +1,19 @@
+import { POSTS } from "../middleware/InMemoryDb"
+import { Link } from "react-router"
 
 export default function DashBoard() {
   return(
     <div className="blogs">
-      <div>
+      <div className="blog-intro">
         <h1>Wlecome to the Project Blog</h1>
         <p>Blog about Frontend, Backend, DevOps and everything in between.</p>
       </div>
-      <div className="blogs-list">
-
+      <div className="blog">
+        <ul className="blog-list">
+          {POSTS.map((post, index)=>{
+            return (<li><Link to={'/projectBlogs/postPage'} state={{userPost: {post}}}><span>{post.title}</span> <span className="date">{post.datePosted}</span></Link></li>)
+          })}          
+        </ul>
       </div>
     </div>
   )
