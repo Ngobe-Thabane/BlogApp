@@ -10,8 +10,8 @@ export default function DashBoard() {
       </div>
       <div className="blog">
         <ul className="blog-list">
-          {POSTS.map((post, index)=>{
-            return (<li><Link to={'/projectBlogs/postPage'} state={{userPost: {post}}}><span>{post.title}</span> <span className="date">{post.datePosted}</span></Link></li>)
+          {POSTS.map((post)=>{
+            return (<li key={post.postId}><Link to={'/projectBlogs/postPage'} state={{userPost: {post}}}><span>{post.title}</span> <span className="date">{post.datePosted}</span></Link></li>)
           })}          
         </ul>
       </div>

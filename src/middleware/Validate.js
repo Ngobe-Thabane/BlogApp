@@ -1,6 +1,6 @@
 import { USERS } from "./InMemoryDb";
 
-
+let user = 1;
 export function logIn(data, navigate){
 
   const {username, password} = data;
@@ -11,11 +11,11 @@ export function logIn(data, navigate){
       localStorage.setItem('loggedUser', userData.id);
       navigate('/projectBlogs');
     }
-
   });
-
 }
 
 export function signIn(data, navigate){
-  
+  const {username, password} = data;
+  USERS.push({id:++user, username:username, password:password});
+  navigate('/login');
 }
