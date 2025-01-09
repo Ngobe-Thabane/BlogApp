@@ -10,6 +10,7 @@ export default function UserNavigation() {
             <Link to={'/projectBlogs/post'}>post</Link>
             <Link to={'/projectBlogs/blogs'}>blogs</Link>
             <Link to={'/projectBlogs/myBlogs'} >my blogs</Link>
+            <Link to={'/login'}>logout</Link>
           </div>
         </div>
       </nav>
