@@ -17,7 +17,9 @@ function App() {  return (
       <Route path='/' element={<Navigation/>}>
         <Route path='/' element={<Homepage/>} />
         <Route path='/home' element={<Homepage/>}/>
+        
         <Route path='/login' element={<FormPage navLink={'/register'} userMassage={"Don't have an account "} action={"Sign In"} authAction={"Login"} authFunction={logIn} />} />
+
         <Route path='/register' element={<FormPage navLink={'/login'} userMassage={"have an account "} action={"LogIn"} authAction={"Register"} authFunction={signIn} />} />
       </Route>
 

@@ -26,8 +26,8 @@ export default function PostPage() {
         POSTS.push(post);
         navigate('/projectBlogs/myBlogs');
         }}>
-        <input type="text"  className="post-heading" placeholder="Heading" name="title" value={post.title} onChange={handleChange}/>
-        <input type="text" className="post-content" placeholder="Post Content" name="content" value={post.content} onChange={handleChange}/>
+        <input type="text"  className="post-heading" placeholder="TITLE" name="title" value={post.title} onChange={handleChange}/>
+        <textarea className="post-content" placeholder="Post content" name="content" value={post.content} onChange={handleChange}  />
         <button type="submit">POST</button>
       </form>
     </div>
