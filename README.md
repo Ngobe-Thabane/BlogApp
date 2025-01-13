@@ -24,7 +24,7 @@ This project is a simple blog application built using **React** and **Vite**. It
 
 1. **Clone the repository**:
 ```bash
-git clone https://github.com/Ngobe-Thabane/ProjectBlog.git
+git clone https://github.com/Ngobe-Thabane/BlogApp.git
 ```
 
 2. **Install dependencies**:
