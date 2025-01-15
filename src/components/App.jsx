@@ -5,11 +5,11 @@ import { Routes, Route } from 'react-router'
 import Homepage from '../pages/Homepage.jsx'
 import UserNavigation from './UserNavigation.jsx'
 import DashBoard from '../pages/DashBoard.jsx'
-import PostPage from '../pages/PostPage.jsx'
-import FormPage from '../pages/FormPage.jsx'
+import PostPage from '../pages/CreatePostPage.jsx'
+import FormPage from '../pages/AuthPage.jsx'
 import { logIn, signIn } from '../middleware/Validate.js'
 import Post from '../pages/Post.jsx'
-import UserPosts from '../pages/UserPosts.jsx'
+import UserPosts from '../pages/Posts.jsx'
 
 function App() {  return (
   <>

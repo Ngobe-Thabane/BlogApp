@@ -1,9 +1,9 @@
 import { useState } from "react"
-import { POSTS } from "../middleware/Enum";
+import { POSTS } from "../middleware/Enum.js";
 import { useNavigate } from "react-router";
 import ReactQuill from 'react-quill';
-import 'react-quill/dist/quill.snow.css';
 import { MODULES } from "../middleware/Enum.js";
+import 'react-quill/dist/quill.snow.css';
 
 let postId = 0;
 
