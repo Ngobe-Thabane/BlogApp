@@ -1,6 +1,5 @@
 import { useLocation } from "react-router"
 
-
 export default function Post() {
   const location = useLocation();
   const {userPost} = location.state;
@@ -13,7 +12,7 @@ export default function Post() {
         <p>{post.date}</p>
       </div>
       <div>
-        <p>{post.content}</p>
+        <div dangerouslySetInnerHTML={{__html: post.content}}></div>
       </div>
     </div>
   )

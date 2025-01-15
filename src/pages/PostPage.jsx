@@ -1,6 +1,9 @@
 import { useState } from "react"
-import { POSTS } from "../middleware/InMemoryDb";
+import { POSTS } from "../middleware/Enum";
 import { useNavigate } from "react-router";
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
+import { MODULES } from "../middleware/Enum.js";
 
 let postId = 0;
 
@@ -8,26 +11,20 @@ export default function PostPage() {
   
   const userId = localStorage.getItem('loggedUser');
   const date = new Date().toDateString();
-  const [post, setPost] = useState({postId: ++postId, userID:(Number.parseInt(userId)), datePosted:date, title:"", content:""});
+  const [value, setValue] = useState("");
+  const [title, setTitle] = useState("");
   const navigate = useNavigate();
-
-  const handleChange = (e) =>{
-    const {name, value} = e.target;
-    setPost((oldData)=>({
-      ...oldData,
-      [name] : value
-    }));
-  }
 
   return (
     <div className="posting-page">
       <form action="" className="post-form" onSubmit={(e)=>{
+        
         e.preventDefault();
-        POSTS.push(post);
+        POSTS.push({postId: ++postId, userID:(Number.parseInt(userId)), datePosted:date, title:title, content:value});
         navigate('/projectBlogs/myBlogs');
         }}>
-        <input type="text"  className="post-heading" placeholder="TITLE" name="title" value={post.title} onChange={handleChange}/>
-        <textarea className="post-content" placeholder="Post content" name="content" value={post.content} onChange={handleChange}  />
+        <input type="text"  className="post-heading" placeholder="TITLE" name="title" value={title} onChange={(e)=>setTitle(e.target.value)}/>
+        <ReactQuill modules={MODULES} theme="snow" value={value} name="content" onChange={setValue}  className="folder"  />
         <button type="submit">POST</button>
       </form>
     </div>

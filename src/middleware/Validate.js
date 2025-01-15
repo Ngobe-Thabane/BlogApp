@@ -1,4 +1,4 @@
-import { USERS } from "./InMemoryDb";
+import { USERS } from "./Enum";
 
 let user = 1;
 export function logIn(data, navigate){

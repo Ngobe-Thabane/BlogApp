@@ -1,4 +1,4 @@
-import { POSTS } from "../middleware/InMemoryDb"
+import { POSTS } from "../middleware/Enum"
 import { Link } from "react-router"
 
 export default function DashBoard() {
