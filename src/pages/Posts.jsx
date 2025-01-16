@@ -5,5 +5,5 @@ export default function UserPosts() {
 
   const user = localStorage.getItem('loggedUser');
   const post = POSTS.filter(post => post.userID === Number.parseInt(user));
-  return (<PostList POSTS={post} />)
+  return (<PostList POSTS={post} userPost={true}/>)
 }

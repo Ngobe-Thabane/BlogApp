@@ -151,9 +151,7 @@ button{
   color: gray;
 }
 
-.blog-list > li > a{
-  display: flex;
-  justify-content: space-between;
+.blog-list > li > .post-list > div > a{
   color: white;
   text-decoration: none;
 }
@@ -167,10 +165,11 @@ button{
   align-self: flex-end;
   font-weight: 800;
   color: grey;
+  flex: 1;
 }
 
 .posting-page{
-  width: 50vw;
+  width: 67vw;
   margin: 2em auto;
 }
 
@@ -184,4 +183,19 @@ button{
   background-color: white;
   color: grey;
   border-radius: .2em;
+}
+
+.post-list{
+  display: flex;
+  align-items: flex-end;
+}
+
+.post-list > a{
+  flex: 1;
+}
+
+.post-list > button{
+  background-color: transparent;
+  padding: 0;
+  margin: 0em 1em;
 }

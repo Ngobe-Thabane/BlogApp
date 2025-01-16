@@ -7,7 +7,7 @@ export default function DashBoard() {
       <div className="blog-intro">
         <p>Blog about Frontend, Backend, DevOps and everything in between.</p>
       </div>
-      <PostList POSTS={POSTS} />
+      <PostList POSTS={POSTS} userPost={false} />
     </div>
   )
   

@@ -1,4 +1,4 @@
-import { USERS } from "./Enum";
+import { USERS, POSTS } from "./Enum";
 
 let user = 1;
 export function logIn(data, navigate){
@@ -13,6 +13,11 @@ export function logIn(data, navigate){
     }
   });
 }
+
+ export function deletePost(post, navigate){
+  POSTS.splice(post, 1);
+  navigate('/projectBlogs/blogs');
+ }
 
 export function signIn(data, navigate){
   const {username, password} = data;
