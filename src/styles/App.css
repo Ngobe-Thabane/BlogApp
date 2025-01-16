@@ -9,7 +9,7 @@ body{
 }
 a{
   text-decoration: none;
-  color: grey;
+  color: white;
 }
 a:hover{
   color: black;
@@ -19,6 +19,7 @@ nav{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-transform: capitalize;
 }
 
 .navigation{
@@ -100,7 +101,7 @@ input{
   outline: none;
   padding: .5em auto;
   font-size: .9em;
-  color: rgb(194, 190, 190);
+  color: white;
 }
 
 button{
@@ -128,6 +129,7 @@ button{
 
 .post-heading{
   font-size: 2em;
+  color: white;
 }
 .post-content{
   min-height: 5em;
@@ -135,7 +137,7 @@ button{
   border-radius: .3em;
   background-color: transparent;
   padding: 1em;
-  font-size: 1em;
+  font-size: .5em;
   color: grey;
   line-height: 1.5em;
 }
@@ -149,11 +151,6 @@ button{
   border-bottom: 1px solid rgba(134, 130, 130, 0.678);
   padding-bottom: .2em;
   color: gray;
-}
-
-.blog-list > li > .post-list > div > a{
-  color: white;
-  text-decoration: none;
 }
 
 .blog-intro{
@@ -198,4 +195,9 @@ button{
   background-color: transparent;
   padding: 0;
   margin: 0em 1em;
+  color: hsl(240, 85%, 60%);
+}
+.post-list > a{
+  color: white;
+  text-decoration: none;
 }

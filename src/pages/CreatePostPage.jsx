@@ -44,7 +44,7 @@ export default function PostPage() {
         POSTS.push({postId: ++postId, userID:(Number.parseInt(userId)), datePosted:date, title:title, content:value});
         navigate('/projectBlogs/myBlogs');
         }}>
-        <input type="text"  className="post-heading" placeholder="TITLE" name="title" value={title} onChange={(e)=>setTitle(e.target.value)}/>
+        <input type="text"  className="post-heading" placeholder="Title" name="title" value={title} onChange={(e)=>setTitle(e.target.value)}/>
         <ReactQuill modules={MODULES} theme="snow" value={value} name="content" onChange={setValue}  className="folder" ref={quillRef}  />
         <button type="submit">POST</button>
       </form>

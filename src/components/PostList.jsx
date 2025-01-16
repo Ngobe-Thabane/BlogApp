@@ -10,7 +10,12 @@ export default function PostList({POSTS, userPost}){
             return (<li key={post.title}>
               <div className="post-list">
                 <Link to={'/projectBlogs/postPage'} state={{userPost: {post}}}><span>{post.title}</span></Link>
-                {userPost && <button onClick={()=> deletePost(post, navigate)}>X</button>}
+                {userPost &&
+                <div> 
+                  <Link to={'/projectBlogs/post'} state={{userPost: {post}}} >edit</Link>
+                  <button onClick={()=> deletePost(post, navigate)}>X</button>
+                </div>
+                 }
               </div>
               </li>);
           })}
