@@ -13,11 +13,13 @@ export const POSTS = [
   }]
 
 export const MODULES = {
-  toolbar: [
-    [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
-    ['bold', 'italic', 'underline', 'strike'],
-    ['code-block'],
-    ['link', 'image'],
-    [{ 'list': 'ordered'}, { 'list': 'bullet' }, { 'list': 'check' }] 
-  ]
+  toolbar: {
+    container: [
+      [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+      ['bold', 'italic', 'underline', 'strike'],
+      ['code-block'],
+      ['link', 'image'],
+      [{ 'list': 'ordered'}, { 'list': 'bullet' }, { 'list': 'check' }] 
+    ]
+}
 }
