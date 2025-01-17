@@ -6,7 +6,7 @@ export default function Navigation() {
     <>
     <nav className="">
       <div className="navigation">
-        <div className="logo"><p>Project Blog</p></div>
+        <div className="logo"><p>BlogApp</p></div>
         <ul className="link-list">
           <li><Link to={'/home'} className="">Home</Link></li>
           <li><Link to={'/login'} className="">Login</Link></li>

@@ -5,7 +5,7 @@ export default function UserNavigation() {
     <div>
       <nav>
         <div className="user-dashboard">
-          <div className="logo">P.B</div>
+          <div className="logo">Bloger</div>
           <div className="link-list">
             <Link to={'/projectBlogs/post'}>post</Link>
             <Link to={'/projectBlogs/blogs'}>blogs</Link>
