@@ -184,7 +184,8 @@ button{
 
 .post-list{
   display: flex;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: baseline;
 }
 
 .post-list > a{
@@ -194,10 +195,18 @@ button{
 .post-list > button{
   background-color: transparent;
   padding: 0;
-  margin: 0em 1em;
   color: hsl(240, 85%, 60%);
 }
 .post-list > a{
   color: white;
   text-decoration: none;
+}
+
+.del-btn{
+  background-color: transparent;
+}
+
+.del-btn > img{
+  width: 30px;
+  height: 30px;
 }
