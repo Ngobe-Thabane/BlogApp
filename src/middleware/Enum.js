@@ -5,7 +5,8 @@ export const USERS = [
 ]
 
 export const POSTS = [
-  { postId:0, 
+  { 
+    postId:0, 
     userID: 0, 
     title: 'My First Blog', 
     datePosted: new Date().toDateString(), 
@@ -13,7 +14,7 @@ export const POSTS = [
         <header>
             <h2>Building My First Blog: A Journey of Learning and Growth</h2>
         </header>
-        <img src="../public/rb_81763.png" alt="blog app">
+        <img src="../rb_81763.png" alt="blog app">
         <section>
             <p>
                 I’ve always been interested in web development, but I never really had the chance to apply my skills until recently.

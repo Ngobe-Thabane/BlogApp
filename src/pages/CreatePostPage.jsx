@@ -12,7 +12,8 @@ export default function PostPage() {
   const userId = localStorage.getItem('loggedUser');
   const date = new Date().toDateString();
   const location = useLocation();
-  const [intialTitle,intialValue, updating, id] = (location.state === null) ? "" : [location.state.userPost.post.title, location.state.userPost.post.content, true, location.state.userPost.post.postId];
+  const [intialTitle,intialValue, updating, id] =  (location.state === null) ? "" 
+      : [location.state.userPost.post.title, location.state.userPost.post.content, true, location.state.userPost.post.postId];
 
   const [value, setValue] =  useState(intialValue);
   const [title, setTitle] = useState(intialTitle);
