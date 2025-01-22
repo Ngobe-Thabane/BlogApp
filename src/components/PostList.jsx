@@ -1,7 +1,9 @@
 import { Link } from "react-router"
 import { deletePost } from "../middleware/Validate";
 import { useNavigate } from "react-router";
+
 export default function PostList({POSTS, userPost}){
+  
   const navigate = useNavigate();
   return (
       <div className="blogs">

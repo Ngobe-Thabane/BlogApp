@@ -15,9 +15,8 @@ export function logIn(data, navigate){
 }
 
  export function deletePost(post, navigate){
-  console.log(post)
-  const postDEl = POSTS.splice(post, 1)
-  console.log(postDEl)
+  const index = POSTS.findIndex(delPost => delPost.postId == post.postId);
+  POSTS.splice(index, 1);
   navigate('/projectBlogs/blogs');
  }
 
