@@ -64,10 +64,10 @@ export const MODULES = {
   toolbar: {
     container: [
       [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
-      ['bold', 'italic', 'underline', 'strike'],
+      ['bold', 'italic', 'underline'],
       ['code-block'],
       ['link', 'image'],
-      [{ 'list': 'ordered'}, { 'list': 'bullet' }, { 'list': 'check' }] 
+      [{ 'list': 'ordered'}, { 'list': 'bullet' }] 
     ]
 }
 }

@@ -15,11 +15,11 @@ export default function PostList({POSTS, userPost}){
                 {userPost &&
                 <div className="user-edit"> 
                   <Link to={'/projectBlogs/post'} state={{userPost: {post}}} >
-                  <img src="../icons8-edit-30.png" alt="edit" className="edit" />
+                  <img src="../icons8-edit-40.png" alt="edit" className="edit" />
                   </Link>
 
                   <button onClick={()=> deletePost(post, navigate)} className="del-btn">
-                    <img src="../icons8-delete-48.png" alt="delete" />
+                    <img src="../icons8-trash-can-48.png" alt="delete" />
                   </button>
                 </div>
                  }
