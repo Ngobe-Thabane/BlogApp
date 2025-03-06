@@ -6,27 +6,16 @@ export default function PostList({POSTS, userPost}){
   
   const navigate = useNavigate();
   return (
-      <div className="blogs">
-        <ul className="blog-list">
+      <div className="blog">
+        <div className="blog-list">
           {POSTS.map(post =>{
-            return (<li key={post.title}>
-              <div className="post-list">
-                <Link to={'/projectBlogs/postPage'} state={{userPost: {post}}}><span>{post.title}</span></Link>
-                {userPost &&
-                <div className="user-edit"> 
-                  <Link to={'/projectBlogs/post'} state={{userPost: {post}}} >
-                  <img src="../icons8-edit-40.png" alt="edit" className="edit" />
-                  </Link>
-
-                  <button onClick={()=> deletePost(post, navigate)} className="del-btn">
-                    <img src="../icons8-trash-can-48.png" alt="delete" />
-                  </button>
-                </div>
-                 }
+            return (<div className="preview-post"> 
+              <div className="">
+                <h3>{post.title}</h3>
               </div>
-              </li>);
+            </div>);
           })}
-        </ul>
+        </div>
       </div>
    )
 }

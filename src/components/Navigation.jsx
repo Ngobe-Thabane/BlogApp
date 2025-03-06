@@ -1,18 +1,14 @@
-import { Link, Outlet } from "react-router"
-
+import {Link,  Outlet } from "react-router"
+import './Nav.css'
 export default function Navigation() {
 
   return (
     <>
-    <nav className="">
-      <div className="navigation">
-        <div className="logo"><p>BlogApp</p></div>
-        <ul className="link-list">
-          <li><Link to={'/home'} className="">Home</Link></li>
-          <li><Link to={'/login'} className="">Login</Link></li>
-          <li><Link to={'/register'} className="">Register</Link></li>
-        </ul>
-      </div>
+    <nav className="navigation">
+      <div className="logo"><p>BlogApp</p></div>
+      <Link to={'/login'}>
+        <button className="read-btn">Start Reading</button>
+      </Link>
     </nav>
     <Outlet/>
     </>

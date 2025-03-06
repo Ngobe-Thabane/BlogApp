@@ -1,0 +1,23 @@
+
+.home-page{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-self: flex-start;
+  height: inherit;
+  margin: 2em 3em 2em 3em;
+}
+
+.blog-heading{
+  font-size: 4em;
+}
+
+.slogen{
+  margin-top: 1em;
+  font-size: 2em;
+  color: rgb(211, 206, 206);
+}
+.pic{
+  width: 450px;
+  height: 450px;
+}
